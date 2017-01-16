@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { PubNubAngular } from 'pubnub-angular2';
 
 import { AppComponent } from './app.component';
 import { SiteHeaderComponent } from './site-header/site-header.component';
@@ -24,7 +25,7 @@ import { BackendApiService } from './backend-api.service';
     FormsModule,
     HttpModule
   ],
-  providers: [BackendApiService],
+  providers: [BackendApiService, PubNubAngular],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
